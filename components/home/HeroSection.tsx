@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
           href="/signup"
-          className="w-full sm:w-auto bg-gray-700 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all shadow-soft hover:shadow-md"
+          className="w-full sm:w-auto bg-dark text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all shadow-soft hover:shadow-md"
         >
           Start Writing for Free
         </Link>
