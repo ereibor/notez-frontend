@@ -1,3 +1,4 @@
+import routes from "@/routes";
 import Link from "next/link";
 
 const NavBar = () => {
@@ -14,13 +15,13 @@ const NavBar = () => {
       </nav>
       <div className="flex items-center gap-3">
         <Link
-          href="/signin"
+          href={routes.SIGNIN}
           className="text-sm font-medium hover:text-gray-600 transition-colors"
         >
           Sign In
         </Link>
         <Link
-          href="/signup"
+          href={routes.SIGNUP}
           className="text-sm font-medium bg-dark text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
         >
           Get Started

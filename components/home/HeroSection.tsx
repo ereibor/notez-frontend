@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import routes from "@/routes";
 const HeroSection = () => {
   return (
     <motion.div
@@ -27,7 +28,7 @@ const HeroSection = () => {
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
-          href="/signup"
+          href={routes.SIGNUP}
           className="w-full sm:w-auto bg-dark text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all shadow-soft hover:shadow-md"
         >
           Start Writing for Free
