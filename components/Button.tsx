@@ -1,16 +1,14 @@
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  type?: "button" | "submit" | "reset";
+
 }
 
-const Button = ({ children, onClick, className, type }: ButtonProps) => {
+const Button = ({ children, className, ...props  }: ButtonProps) => {
   return (
     <button
-      type={type}
+      {...props}
       className={`w-full py-4 rounded-full font-medium transition-colors mt-6 cursor-pointer ${className}`}
-      onClick={onClick}
+    
     >
       {children}
     </button>
