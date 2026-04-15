@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import Button from "@/components/Button";
+import routes from "@/routes";
 export default function OTPVerification() {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timeLeft, setTimeLeft] = useState(30);
@@ -56,7 +58,7 @@ export default function OTPVerification() {
       className="min-h-screen flex flex-col items-center justify-center p-6 max-w-md mx-auto w-full relative"
     >
       <Link
-        href="/forgot-password"
+        href={routes.FORGOT_PASSWORD}
         className="absolute top-8 left-6 p-2 rounded-full hover:bg-black/5 transition-colors"
       >
         <ArrowLeft size={24} />
@@ -89,13 +91,13 @@ export default function OTPVerification() {
             ))}
           </div>
 
-          <button
+          <Button
             type="submit"
             disabled={otp.join("").length !== 6}
             className="w-full bg-dark text-white py-4 rounded-full font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Verify
-          </button>
+          </Button>
         </form>
 
         <div className="text-center mt-6">

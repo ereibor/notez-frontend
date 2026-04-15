@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import routes from "@/routes";
 export default function ForgotPassword() {
   const [submitted, setSubmitted] = useState(true);
   return (
@@ -22,7 +23,7 @@ export default function ForgotPassword() {
       className="min-h-screen flex flex-col items-center justify-center p-6 max-w-md mx-auto w-full relative"
     >
       <Link
-        href="/signin"
+        href={routes.SIGNIN}
         className="absolute top-8 left-6 p-2 rounded-full hover:bg-black/5 transition-colors"
       >
         <ArrowLeft size={24} />

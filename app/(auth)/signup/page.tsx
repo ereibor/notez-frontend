@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/Button";
+import routes from "@/routes";
+
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -106,7 +108,7 @@ export default function SignUp() {
         <p className="text-center text-sm text-gray-500 mt-8">
           Already have an account?{" "}
           <Link
-            href="/signin"
+            href={routes.SIGNIN}
             className="text-dark font-semibold hover:underline"
           >
             Sign in

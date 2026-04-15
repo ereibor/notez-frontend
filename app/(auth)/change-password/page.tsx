@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
+import routes from "@/routes";
 
 export default function ChangePassword() {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function ChangePassword() {
       className="min-h-screen flex flex-col items-center justify-center p-6 max-w-md mx-auto w-full relative"
     >
       <Link
-        href="/otp-verification"
+        href={routes.VERIFY_OTP}
         className="absolute top-8 left-6 p-2 rounded-full hover:bg-black/5 transition-colors"
       >
         <ArrowLeft size={24} />

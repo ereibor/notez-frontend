@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff } from "lucide-react";
 import Button from "@/components/Button";
+import routes from "@/routes";
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -71,7 +72,7 @@ export default function SignIn() {
 
           <div className="flex justify-end">
             <Link
-              href="/forgot-password"
+              href={routes.FORGOT_PASSWORD}
               className="text-sm text-gray-500 hover:text-dark transition-colors"
             >
               Forgot password?
@@ -125,7 +126,7 @@ export default function SignIn() {
         <p className="text-center text-sm text-gray-500 mt-8">
           Don&apos;t have an account?{" "}
           <Link
-            href="/signup"
+            href={routes.SIGNUP}
             className="text-dark font-semibold hover:underline"
           >
             Create account
