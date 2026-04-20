@@ -5,6 +5,7 @@ const routes = {
   FORGOT_PASSWORD: "/forgot-password",
   VERIFY_OTP: "/verify-otp",
   CHANGE_PASSWORD: "/change-password",
+  DASHBOARD: "/dashboard",
 } as const;
 
 export default routes;

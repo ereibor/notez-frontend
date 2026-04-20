@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import routes from "@/routes";
+
 export default function ForgotPassword() {
   const [submitted, setSubmitted] = useState(true);
   return (
